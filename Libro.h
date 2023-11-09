@@ -1,3 +1,4 @@
+#ifndef LIBRO_H
 #define LIBRO_H // Define LIBRO_H
 #include <string>
 
@@ -11,3 +12,5 @@ private:
     std::string titulo; // Atributo para el título del libro
     std::string autor; // Atributo para el autor del libro
 };
+
+#endif
