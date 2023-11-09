@@ -1,3 +1,4 @@
+#ifndef BIBLIOTECARIO_H 
 #define BIBLIOTECARIO_H // Define BIBLIOTECARIO_H
 #include <string>
 
@@ -11,3 +12,5 @@ private:
     std::string nombre; // Atributo para el nombre del bibliotecario
     int aniosDeServicio; // Atributo para los años de servicio
 };
+
+#endif
