@@ -1,3 +1,4 @@
+#ifndef AUTOR_H
 #define AUTOR_H // Define AUTOR_H
 #include <string>
 
@@ -11,3 +12,5 @@ private:
     std::string nombre; // Atributo para el nombre del autor
     std::string genero; // Atributo para el genero del autor
 };
+
+#endif
