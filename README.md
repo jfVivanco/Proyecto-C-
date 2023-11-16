@@ -10,3 +10,5 @@ El usuario puede realizar las siguientes acciones con este programa:
   bibliotecario.
 
 Sin embargo, por ahora el usuario no puede introducir datos, solo los que ya estan en el main se van a mostrar.
+
+Tengo una version del codigo que incluye mas clases dentro de las clases principales pero me saltan unos errores que no he podido resolver entonces los voy a corregir en asesorias.
