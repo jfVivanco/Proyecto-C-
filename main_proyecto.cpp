@@ -131,7 +131,6 @@ int main() {
 
     // Imprimir información actualizada
     autor.info();
-
     std::cout << std::endl;
 
     // Crear instancia de Bibliotecario
@@ -148,8 +147,6 @@ int main() {
 
     // Imprimir información actualizada
     bibliotecario.info();
-
-    std::cout << std::endl;
 
     // Crear instancia de Biblioteca
     Biblioteca biblioteca("Biblioteca Central", bibliotecario);
