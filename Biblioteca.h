@@ -3,7 +3,6 @@
 
 #include <vector>
 #include "Libro.h"
-#include "Autor.h"
 #include "Bibliotecario.h"
 
 class Biblioteca {
