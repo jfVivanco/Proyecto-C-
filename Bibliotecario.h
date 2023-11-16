@@ -1,16 +1,23 @@
-#ifndef BIBLIOTECARIO_H 
-#define BIBLIOTECARIO_H // Define BIBLIOTECARIO_H
-#include <string>
+#ifndef BIBLIOTECA_H
+#define BIBLIOTECA_H
 
-// Define una clase de bibliotecario con dos atributos privados y un método público
-class Bibliotecario {
+#include <vector>
+#include "Libro.h"
+#include "Autor.h"
+#include "Bibliotecario.h"
+
+class Biblioteca {
 public:
-    Bibliotecario(const std::string& nombre, int aniosDeServicio);
-    void info();
+    Biblioteca(const std::string& nombre, Bibliotecario bibliotecario);
+
+    // Operaciones de la biblioteca
+    void agregarLibro(const Libro& libro);
+    void mostrarInventario() const;
 
 private:
-    std::string nombre; // Atributo para el nombre del bibliotecario
-    int aniosDeServicio; // Atributo para los años de servicio
+    std::string nombre;
+    Bibliotecario bibliotecario;
+    std::vector<Libro> inventario;
 };
 
 #endif
