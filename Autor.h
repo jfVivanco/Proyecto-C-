@@ -1,16 +1,24 @@
 #ifndef AUTOR_H
-#define AUTOR_H // Define AUTOR_H
+#define AUTOR_H
+
 #include <string>
 
-// Define una clase de autor con dos atributos privados y un método público
 class Autor {
 public:
     Autor(const std::string& nombre, const std::string& genero);
     void info();
 
+    // Getters
+    std::string getNombre() const;
+    std::string getGenero() const;
+
+    // Setters
+    void setNombre(const std::string& nombre);
+    void setGenero(const std::string& genero);
+
 private:
-    std::string nombre; // Atributo para el nombre del autor
-    std::string genero; // Atributo para el genero del autor
+    std::string nombre;
+    std::string genero;
 };
 
 #endif
