@@ -1,23 +1,24 @@
-#ifndef BIBLIOTECA_H
-#define BIBLIOTECA_H
+#ifndef BIBLIOTECARIO_H
+#define BIBLIOTECARIO_H
 
-#include <vector>
-#include "Libro.h"
-#include "Autor.h"
-#include "Bibliotecario.h"
+#include <string>
 
-class Biblioteca {
+class Bibliotecario {
 public:
-    Biblioteca(const std::string& nombre, Bibliotecario bibliotecario);
+    Bibliotecario(const std::string& nombre, int aniosDeServicio);
+    void info();
 
-    // Operaciones de la biblioteca
-    void agregarLibro(const Libro& libro);
-    void mostrarInventario() const;
+    // Getters
+    std::string getNombre() const;
+    int getAniosDeServicio() const;
+
+    // Setters
+    void setNombre(const std::string& nombre);
+    void setAniosDeServicio(int aniosDeServicio);
 
 private:
     std::string nombre;
-    Bibliotecario bibliotecario;
-    std::vector<Libro> inventario;
+    int aniosDeServicio;
 };
 
 #endif
