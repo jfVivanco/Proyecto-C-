@@ -11,11 +11,11 @@ using namespace std;
 
 class Seccion : public Libro {
 private:
-    vector<string> colecciones;
+    vector<string> colecciones; // Vector que almacena las colecciones de la sección
 
 public:
-    // Constructor por defecto
-    Seccion();
+    // Constructores
+    Seccion(); // Constructor por defecto
 
     // Constructor con parámetros para inicializar la clase base y las colecciones
     Seccion(string nm, string thr, int lks, string gnr, int pgs) : Libro(nm, thr, lks, gnr, pgs) {
@@ -33,16 +33,19 @@ public:
     void info();
 };
 
+// Método getter para obtener las colecciones de la sección
 vector<string> Seccion::get_colecciones() {
     return colecciones;
 }
 
+// Método setter para establecer las colecciones de la sección
 void Seccion::set_colecciones(vector<string> clcs) {
     colecciones = clcs;
 }
 
+// Método para mostrar información detallada de la sección
 void Seccion::info() {
-    char aux = 34;
+    char aux = 34; // Código ASCII para comillas dobles
     cout << aux << get_name() << aux << " de: " << get_author() << endl
          << "Colecciones:" << endl;
 
