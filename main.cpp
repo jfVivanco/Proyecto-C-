@@ -1,83 +1,107 @@
+/*
+ * Proyecto Progra
+ * Jose Fernando Vivanco Benavides
+ * A00838976
+ * 28/11/2023
+*/
+
+/*
+ *Este programa de consola interactivo permite al usuario gestionar información sobre libros, colecciones y secciones. 
+ *Utiliza las clases Libro_concreto, Coleccion y Seccion para representar estos elementos, y mediante un menú, 
+ *el usuario puede agregar libros, colecciones y secciones, mostrar información detallada de los elementos almacenados, 
+ *o salir del programa. La información se almacena en vectores, y el programa utiliza la entrada del usuario para realizar 
+ *las acciones correspondientes.
+*/
+
 #include <iostream>
 #include <vector>
 #include "Libro_concreto.h"
 #include "Coleccion.h"
 #include "Seccion.h"
+using namespace std;
 
 int main() {
-    std::vector<Libro_concreto> libros;
-    std::vector<Coleccion> colecciones;
-    std::vector<Seccion> secciones;
-    std::string titulo, autor, genero, ruta;
+    // Declaración de vectores para almacenar libros, colecciones y secciones
+    vector<Libro_concreto> libros;
+    vector<Coleccion> colecciones;
+    vector<Seccion> secciones;
+    
+    // Declaración de variables para la entrada de datos
+    string titulo, autor, genero, ruta;
     int paginas, likes;
-    std::vector<std::string> nombresColecciones;
+    vector<string> nombresColecciones;
 
     int opcion = 0;
     do {
-        std::cout << "------ MENÚ ------" << std::endl;
-        std::cout << "1. Agregar Libro" << std::endl;
-        std::cout << "2. Agregar Coleccion" << std::endl;
-        std::cout << "3. Agregar Seccion" << std::endl;
-        std::cout << "4. Mostrar Informacion" << std::endl;
-        std::cout << "5. Salir" << std::endl;
-        std::cout << "Seleccione una opcion: ";
-        std::cin >> opcion;
+        // Menú principal
+        cout << "------ MENÚ ------" << endl;
+        cout << "1. Agregar Libro" << endl;
+        cout << "2. Agregar Coleccion" << endl;
+        cout << "3. Agregar Seccion" << endl;
+        cout << "4. Mostrar Informacion" << endl;
+        cout << "5. Salir" << endl;
+        cout << "Seleccione una opcion: ";
+        cin >> opcion;
 
         switch (opcion) {
             case 1: {
-                std::cout << "Ingrese titulo del libro: ";
-                std::cin.ignore();
-                std::getline(std::cin, titulo);
-                std::cout << "Ingrese autor del libro: ";
-                std::getline(std::cin, autor);
-                std::cout << "Ingrese genero del libro: ";
-                std::getline(std::cin, genero);
-                std::cout << "Ingrese numero de paginas: ";
-                std::cin >> paginas;
-                std::cout << "Ingrese cantidad de likes: ";
-                std::cin >> likes;
+                // Agregar libro
+                cout << "Ingrese titulo del libro: ";
+                cin.ignore();
+                getline(cin, titulo);
+                cout << "Ingrese autor del libro: ";
+                getline(cin, autor);
+                cout << "Ingrese genero del libro: ";
+                getline(cin, genero);
+                cout << "Ingrese numero de paginas: ";
+                cin >> paginas;
+                cout << "Ingrese cantidad de likes: ";
+                cin >> likes;
 
                 libros.emplace_back(titulo, autor, likes, genero, paginas);
                 break;
             }
             case 2: {
-                std::cout << "Ingrese nombre de la coleccion: ";
-                std::cin.ignore();
-                std::getline(std::cin, titulo);
-                std::cout << "Ingrese autor(es) de la coleccion: ";
-                std::getline(std::cin, autor);
-                std::cout << "Ingrese genero de la coleccion: ";
-                std::getline(std::cin, genero);
-                std::cout << "Ingrese ruta de la coleccion: ";
-                std::getline(std::cin, ruta);
-                std::cout << "Ingrese numero de paginas total de la coleccion: ";
-                std::cin >> paginas;
+                // Agregar colección
+                cout << "Ingrese nombre de la coleccion: ";
+                cin.ignore();
+                getline(cin, titulo);
+                cout << "Ingrese autor(es) de la coleccion: ";
+                getline(cin, autor);
+                cout << "Ingrese genero de la coleccion: ";
+                getline(cin, genero);
+                cout << "Ingrese ruta de la coleccion: ";
+                getline(cin, ruta);
+                cout << "Ingrese numero de paginas total de la coleccion: ";
+                cin >> paginas;
 
                 colecciones.emplace_back(titulo, autor, genero, paginas, ruta);
                 break;
             }
             case 3: {
-                std::cout << "Ingrese nombre de la seccion: ";
-                std::cin.ignore();
-                std::getline(std::cin, titulo);
-                std::cout << "Ingrese editor de la seccion: ";
-                std::getline(std::cin, autor);
-                std::cout << "Ingrese genero de la seccion: ";
-                std::getline(std::cin, genero);
-                std::cout << "Ingrese numero de paginas total de la seccion: ";
-                std::cin >> paginas;
-                std::cout << "Ingrese cantidad de likes de la seccion: ";
-                std::cin >> likes;
+                // Agregar sección
+                cout << "Ingrese nombre de la seccion: ";
+                cin.ignore();
+                getline(cin, titulo);
+                cout << "Ingrese editor de la seccion: ";
+                getline(cin, autor);
+                cout << "Ingrese genero de la seccion: ";
+                getline(cin, genero);
+                cout << "Ingrese numero de paginas total de la seccion: ";
+                cin >> paginas;
+                cout << "Ingrese cantidad de likes de la seccion: ";
+                cin >> likes;
 
+                // Obtener nombres de las colecciones a agregar a la sección
                 int numColecciones;
-                std::cout << "¿Cuantas colecciones deseas agregar a la seccion? ";
-                std::cin >> numColecciones;
+                cout << "¿Cuantas colecciones deseas agregar a la seccion? ";
+                cin >> numColecciones;
                 nombresColecciones.clear();
-                std::cin.ignore();
+                cin.ignore();
                 for (int i = 0; i < numColecciones; ++i) {
-                    std::string nombreColeccion;
-                    std::cout << "Ingrese el nombre de la coleccion " << (i + 1) << ": ";
-                    std::getline(std::cin, nombreColeccion);
+                    string nombreColeccion;
+                    cout << "Ingrese el nombre de la coleccion " << (i + 1) << ": ";
+                    getline(cin, nombreColeccion);
                     nombresColecciones.push_back(nombreColeccion);
                 }
 
@@ -85,26 +109,29 @@ int main() {
                 break;
             }
             case 4: {
-                std::cout << "\n--- Libros ---\n";
+                // Mostrar información de libros, colecciones y secciones
+                cout << "\n--- Libros ---\n";
                 for (auto &libro : libros) {
                     libro.info();
                 }
-                std::cout << "\n--- Colecciones ---\n";
+                cout << "\n--- Colecciones ---\n";
                 for (auto &coleccion : colecciones) {
                     coleccion.info();
                 }
-                std::cout << "\n--- Secciones ---\n";
+                cout << "\n--- Secciones ---\n";
                 for (auto &seccion : secciones) {
                     seccion.info();
                 }
                 break;
             }
             case 5: {
-                std::cout << "Saliendo del programa..." << std::endl;
+                // Salir del programa
+                cout << "Saliendo del programa..." << endl;
                 break;
             }
             default:
-                std::cout << "Opcion no valida, por favor intente nuevamente." << std::endl;
+                // Opción no válida
+                cout << "Opcion no valida, por favor intente nuevamente." << endl;
         }
     } while (opcion != 5);
 
