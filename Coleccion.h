@@ -1,3 +1,18 @@
+/*
+ * Proyecto Progra
+ * Jose Fernando Vivanco Benavides
+ * A00838976
+ * 28/11/2023
+*/
+
+/*
+ *La clase Coleccion hereda de la clase Libro y representa una colección de libros con una ruta específica. 
+ *Tiene dos constructores: uno por defecto y otro con parámetros para inicializar la colección. 
+ *Los métodos get_route() y set_route() permiten acceder y establecer la ruta de la colección. 
+ *El método info() imprime detalles sobre la colección, incluyendo su nombre, autor, género, número de páginas y ruta. 
+ *Además, la clase incluye un método open_book() que simula la apertura de un libro de la colección.
+*/
+
 #ifndef COLECCION_H
 #define COLECCION_H
 
@@ -8,6 +23,7 @@
 
 using namespace std;
 
+// Clase Coleccion que hereda de la clase Libro
 class Coleccion : public Libro {
 private:
     string route; // Ruta específica de la colección
