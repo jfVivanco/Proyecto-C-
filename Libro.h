@@ -24,30 +24,30 @@ using namespace std;
 class Libro {
 private:
     // Atributos privados
-    std::string name;       // Nombre del libro
-    std::string author;     // Autor del libro
-    std::string genre;      // Género del libro
+    string name;       // Nombre del libro
+    string author;     // Autor del libro
+    string genre;      // Género del libro
     int likes;              // Número de likes del libro
     int pages;              // Número de páginas del libro
 
 public:
     // Constructores
     Libro(); // Constructor por defecto
-    Libro(std::string nm, std::string thr, int lks, std::string gnr, int pgs) // Constructor con parámetros
+    Libro(string nm, string thr, int lks, string gnr, int pgs) // Constructor con parámetros
         : name(nm), author(thr), genre(gnr), likes(lks), pages(pgs) {}
 
     // Métodos getters
-    std::string get_name();         // Obtener nombre del libro
-    std::string get_author();       // Obtener autor del libro
+    string get_name();         // Obtener nombre del libro
+    string get_author();       // Obtener autor del libro
     int get_likes();                // Obtener número de likes del libro
-    std::string get_genre();        // Obtener género del libro
+    string get_genre();        // Obtener género del libro
     int get_pages();                // Obtener número de páginas del libro
 
     // Métodos setters
-    void set_name(std::string);       // Establecer nombre del libro
-    void set_author(std::string);     // Establecer autor del libro
+    void set_name(string);       // Establecer nombre del libro
+    void set_author(string);     // Establecer autor del libro
     void set_likes(int);              // Establecer número de likes del libro
-    void set_genre(std::string);      // Establecer género del libro
+    void set_genre(string);      // Establecer género del libro
     void set_pages(int);              // Establecer número de páginas del libro
 
     // Método abstracto puro para mostrar información del libro
