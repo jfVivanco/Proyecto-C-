@@ -18,6 +18,7 @@
 #include "Libro_concreto.h"
 #include "Coleccion.h"
 #include "Seccion.h"
+
 using namespace std;
 
 int main() {
