@@ -15,3 +15,4 @@ La funcionalidad del sistema se centra en la organización y visualización de i
 3. Se añadio un menu que se despliega hasta que el usuario decide salir.
 4. Se añadieron comentarios.
 5. Se corrigieron errores y redundancias en el codigo en general.
+6. Se ordeno el codigo.
