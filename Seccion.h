@@ -1,3 +1,17 @@
+/*
+ * Proyecto Progra
+ * Jose Fernando Vivanco Benavides
+ * A00838976
+ * 28/11/2023
+*/
+
+/*
+ *La clase Seccion hereda de la clase Libro y representa una sección que puede contener colecciones. 
+ *Tiene constructores para inicializar la sección con o sin colecciones, así como métodos para obtener 
+ *y establecer las colecciones. El método info() imprime detalles sobre la sección, incluyendo las 
+ *colecciones y el número de páginas.
+*/
+
 #ifndef SECCION_H
 #define SECCION_H
 
@@ -9,6 +23,7 @@
 
 using namespace std;
 
+// Clase Seccion que hereda de la clase Libro
 class Seccion : public Libro {
 private:
     vector<string> colecciones; // Vector que almacena las colecciones de la sección
