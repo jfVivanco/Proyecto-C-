@@ -10,9 +10,9 @@ La funcionalidad del sistema se centra en la organización y visualización de i
 
 ## Correcciones
 
-1. Se cambiaron las clases que usa el codigo. SICT0302-Toma de decisiones
-2. Se añadieron punteros. SICT0303-Implementación de acciones
-3. Se añadio un menu que se despliega hasta que el usuario decide salir. SICT0303-Implementación de acciones
-4. Se añadieron comentarios. SICT0401-Aplicación de estándares y normas
-5. Se corrigieron errores y redundancias en el codigo en general. SICT0401-Aplicación de estándares y normas
-6. Se ordeno el codigo. SICT0401-Aplicación de estándares y normas
+-  Se cambiaron las clases que usa el codigo. SICT0302-Toma de decisiones
+-  Se añadieron punteros. SICT0303-Implementación de acciones
+-  Se añadio un menu que se despliega hasta que el usuario decide salir. SICT0303-Implementación de acciones
+-  Se añadieron comentarios. SICT0401-Aplicación de estándares y normas
+-  Se corrigieron errores y redundancias en el codigo en general. SICT0401-Aplicación de estándares y normas
+-  Se ordeno el codigo. SICT0401-Aplicación de estándares y normas
